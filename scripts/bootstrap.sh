@@ -10,6 +10,6 @@ guix pull
 GUIX_PROFILE=`guix time-machine -C ${SCRIPT_DIR}/../.config/guix/channels-lock.scm`
 GUIX="${GUIX_PROFILE}/bin/guix"
 
-$GUIX pull -C ${SCRIPT_DIR}/../.config/guix/channels-lock.scm
+$GUIX pull -C ${SCRIPT_DIR}/../.config/guix/channels-lock.scm --allow-downgrades
 
 guix shell --check just stow -- just --justfile ${SCRIPT_DIR}/../justfile home-build home-switch stow
